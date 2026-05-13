@@ -18,6 +18,8 @@
   --reveal-duration-long: 2.1s;
   --header-h: 4rem;
   --radius: 16px;
+  /* Minimum comfortable tap target (~44px) */
+  --tap-min: 2.75rem;
 }
 
 *,
@@ -28,6 +30,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -39,8 +43,8 @@ html {
 body {
   margin: 0;
   font-family: var(--font-ui);
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: clamp(0.9375rem, 0.88rem + 0.28vw, 1rem);
+  line-height: 1.62;
   color: var(--text);
   background: var(--bg-deep);
   overflow-x: hidden;
@@ -58,8 +62,8 @@ body.is-menu-open {
 /* Language switcher */
 .lang-switcher {
   position: fixed;
-  top: 0.85rem;
-  right: 1rem;
+  top: max(0.85rem, env(safe-area-inset-top, 0px));
+  right: max(1rem, env(safe-area-inset-right, 0px));
   z-index: 60;
   display: flex;
   align-items: center;
@@ -76,8 +80,8 @@ body.is-menu-open {
 
 @media (max-width: 899px) {
   .lang-switcher {
-    right: 4.25rem;
-    top: 0.65rem;
+    top: max(0.65rem, env(safe-area-inset-top, 0px));
+    right: max(4.25rem, calc(0.65rem + env(safe-area-inset-right, 0px)));
     padding: 0.28rem 0.38rem;
     gap: 0.35rem;
   }
@@ -223,8 +227,8 @@ button {
 
 .skip-link {
   position: fixed;
-  top: 0.75rem;
-  left: 0.75rem;
+  top: max(0.75rem, env(safe-area-inset-top, 0px));
+  left: max(0.75rem, env(safe-area-inset-left, 0px));
   z-index: 3000;
   padding: 0.5rem 1rem;
   background: var(--bg-ocean);
@@ -336,6 +340,9 @@ button {
 .site {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Header */
@@ -360,7 +367,7 @@ button {
 .header__inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px));
   height: 100%;
   display: flex;
   align-items: center;
@@ -457,7 +464,8 @@ button {
   top: var(--header-h);
   left: 0;
   right: 0;
-  padding: 1rem 1.25rem 1.5rem;
+  padding: 1rem max(1.25rem, env(safe-area-inset-right, 0px)) max(1.5rem, calc(0.75rem + env(safe-area-inset-bottom, 0px)))
+    max(1.25rem, env(safe-area-inset-left, 0px));
   background: rgba(5, 13, 31, 0.96);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--glass-border);
@@ -480,8 +488,10 @@ button {
 }
 
 .nav__drawer-link {
-  display: block;
-  padding: 0.85rem 0;
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: 0.65rem 0;
   font-size: 0.8125rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -498,8 +508,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.85rem;
-  padding: 0 1.5rem;
+  min-height: max(2.85rem, var(--tap-min));
+  padding: 0.55rem 1.5rem;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -567,7 +577,8 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: calc(var(--header-h) + 2rem) 1.25rem 4rem;
+  padding: calc(var(--header-h) + env(safe-area-inset-top, 0px) + 2rem) max(1.15rem, env(safe-area-inset-right, 0px))
+    max(4rem, env(safe-area-inset-bottom, 0px)) max(1.15rem, env(safe-area-inset-left, 0px));
   background: radial-gradient(ellipse 90% 60% at 50% -15%, rgba(45, 212, 191, 0.07), transparent 55%),
     radial-gradient(ellipse 70% 45% at 50% 110%, rgba(5, 13, 31, 0.85), var(--bg-deep));
 }
@@ -668,7 +679,7 @@ button {
 
 .hero__lead {
   margin: 0 auto 2rem;
-  max-width: 26rem;
+  max-width: min(26rem, 100%);
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   font-weight: 300;
   color: var(--text-muted);
@@ -685,7 +696,8 @@ button {
 /* Sections */
 .section {
   position: relative;
-  padding: 5rem 1.25rem;
+  padding: clamp(3.25rem, 10vw, 5rem) max(1rem, env(safe-area-inset-right, 0px)) clamp(3.25rem, 10vw, 5rem)
+    max(1rem, env(safe-area-inset-left, 0px));
 }
 
 .section--alt {
@@ -861,7 +873,7 @@ button {
 }
 
 .room-tile__body {
-  padding: 1.15rem 1.25rem 1.35rem;
+  padding: clamp(1rem, 3vw, 1.15rem) clamp(1rem, 3.5vw, 1.25rem) clamp(1.15rem, 3vw, 1.35rem);
 }
 
 .room-tile__name {
@@ -893,7 +905,8 @@ button {
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  padding: 0.55rem 1.1rem;
+  min-height: var(--tap-min);
+  padding: 0.65rem 1.1rem;
   width: 100%;
   font-family: var(--font-ui);
   font-size: 0.72rem;
@@ -936,7 +949,8 @@ button {
 /* —— Nasza przestrzeń —— */
 .space {
   position: relative;
-  padding: clamp(3.5rem, 8vw, 5.5rem) 1.25rem;
+  padding: clamp(3.5rem, 8vw, 5.5rem) max(1.25rem, env(safe-area-inset-right, 0px)) clamp(3.5rem, 8vw, 5.5rem)
+    max(1.25rem, env(safe-area-inset-left, 0px));
   overflow: hidden;
   background: radial-gradient(ellipse 120% 80% at 50% 0%, rgba(45, 212, 191, 0.06), transparent 55%),
     linear-gradient(180deg, var(--bg-deep) 0%, #030a18 40%, var(--bg-ocean) 100%);
@@ -1310,9 +1324,12 @@ button {
   position: relative;
   z-index: 2;
   min-height: 100vh;
-  padding: calc(var(--header-h) + 1rem) 1rem 2.5rem;
+  min-height: 100dvh;
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
+  padding: calc(var(--header-h) + env(safe-area-inset-top, 0px) + 1rem) max(1rem, env(safe-area-inset-right, 0px))
+    max(2.5rem, env(safe-area-inset-bottom, 0px)) max(1rem, env(safe-area-inset-left, 0px));
 }
 
 body.has-rez-cart .rez-page {
@@ -1320,7 +1337,7 @@ body.has-rez-cart .rez-page {
 }
 
 body.has-rez-cart .rez-toast {
-  bottom: clamp(5.5rem, 14vh, 7rem);
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 5.5rem), 5.5rem);
 }
 
 .rez-page__back {
@@ -1377,6 +1394,7 @@ body.has-rez-cart .rez-toast {
 
 .rez-datebar__btn {
   flex: 0 0 auto;
+  min-height: var(--tap-min);
   padding: 0.5rem 0.85rem;
   font-family: var(--font-ui);
   font-size: 0.7rem;
@@ -1397,8 +1415,9 @@ body.has-rez-cart .rez-toast {
 
 .rez-datebar__btn--icon {
   width: auto;
-  min-width: 42px;
-  height: 42px;
+  min-width: max(42px, var(--tap-min));
+  min-height: var(--tap-min);
+  height: auto;
   padding: 0 0.65rem;
   display: inline-flex;
   align-items: center;
@@ -1416,8 +1435,8 @@ body.has-rez-cart .rez-toast {
 }
 
 .rez-datebar__btn--arrow {
-  width: 40px;
-  height: 40px;
+  width: max(40px, var(--tap-min));
+  height: max(40px, var(--tap-min));
   padding: 0;
   display: grid;
   place-items: center;
@@ -1461,8 +1480,12 @@ body.has-rez-cart .rez-toast {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  width: 100%;
+  max-width: 100%;
   overflow: auto;
-  max-height: min(calc(100vh - 200px), 580px);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  max-height: min(calc(100dvh - 200px), 580px);
 }
 
 .rez-matrix {
@@ -1686,7 +1709,12 @@ body.is-rez-pay-open {
   z-index: 1;
   width: 100%;
   max-width: min(90vw, 840px);
+  max-height: min(92dvh, 920px);
   margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   padding: clamp(1.65rem, 4vw, 2.35rem) clamp(1.35rem, 4vw, 2.5rem) clamp(1.5rem, 3vw, 2rem);
   border-radius: var(--radius);
   border: 1px solid rgba(45, 212, 191, 0.28);
@@ -1779,7 +1807,8 @@ body.is-rez-pay-open {
 .rez-cart__inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0.65rem 0.85rem 0.75rem;
+  padding: 0.65rem max(0.85rem, env(safe-area-inset-right, 0px)) max(calc(0.75rem + env(safe-area-inset-bottom, 0px)), 0.85rem)
+    max(0.85rem, env(safe-area-inset-left, 0px));
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1892,6 +1921,7 @@ body.is-rez-pay-open {
 }
 
 .rez-cart__checkout {
+  min-height: var(--tap-min);
   padding: 0.65rem 1.1rem;
   font-family: var(--font-ui);
   font-size: 0.68rem;
@@ -2109,7 +2139,7 @@ body.is-rez-pay-open {
 
 .rez-toast {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translate3d(-50%, 120%, 0);
   z-index: 195;
@@ -2302,7 +2332,10 @@ body.is-rez-pay-open {
 .menu-modal__content {
   height: calc(100% - 92px);
   overflow: auto;
-  padding: 1.1rem 1.25rem 1.5rem;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 1.1rem max(1.25rem, env(safe-area-inset-right, 0px)) max(calc(1.5rem + env(safe-area-inset-bottom, 0px)), 1.25rem)
+    max(1.25rem, env(safe-area-inset-left, 0px));
   position: relative;
   z-index: 2;
 }
@@ -2310,7 +2343,8 @@ body.is-rez-pay-open {
 @media (min-width: 720px) {
   .menu-modal__content {
     height: calc(100% - 96px);
-    padding: 1.35rem 1.6rem 2rem;
+    padding: 1.35rem max(1.6rem, env(safe-area-inset-right, 0px)) max(2rem, calc(0.5rem + env(safe-area-inset-bottom, 0px)))
+      max(1.6rem, env(safe-area-inset-left, 0px));
   }
 }
 
@@ -2998,7 +3032,8 @@ body.is-rez-pay-open {
 }
 
 .footer {
-  padding: 2rem 1.25rem;
+  padding: 2rem max(1.25rem, env(safe-area-inset-right, 0px)) max(2rem, calc(1.25rem + env(safe-area-inset-bottom, 0px)))
+    max(1.25rem, env(safe-area-inset-left, 0px));
   border-top: 1px solid var(--glass-border);
   text-align: center;
   background: var(--bg-ocean);
@@ -3048,8 +3083,8 @@ body.is-rez-pay-open {
 
 .booking__back {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: max(1rem, env(safe-area-inset-top, 0px));
+  left: max(1rem, env(safe-area-inset-left, 0px));
   z-index: 2;
   font-size: 0.6875rem;
   font-weight: 600;
@@ -3075,7 +3110,8 @@ body.is-rez-pay-open {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  padding: 4.25rem 1.25rem 1.25rem;
+  padding: max(4.25rem, calc(env(safe-area-inset-top, 0px) + 3.25rem)) max(1.25rem, env(safe-area-inset-right, 0px))
+    max(1.25rem, env(safe-area-inset-bottom, 0px)) max(1.25rem, env(safe-area-inset-left, 0px));
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
@@ -3084,7 +3120,8 @@ body.is-rez-pay-open {
 
 @media (min-width: 640px) {
   .booking__viewport {
-    padding: 4.5rem 2rem 1.5rem;
+    padding: max(4.5rem, calc(env(safe-area-inset-top, 0px) + 3.5rem)) max(2rem, env(safe-area-inset-right, 0px)) max(1.5rem, env(safe-area-inset-bottom, 0px))
+      max(2rem, env(safe-area-inset-left, 0px));
   }
 }
 
@@ -4377,4 +4414,66 @@ body.is-rez-pay-open {
     animation: none !important;
     opacity: 0.22;
   }
+}
+
+/* ========== Mobile polish: titles, stacked CTAs, touch ========== */
+@media (max-width: 540px) {
+  .hero__title {
+    letter-spacing: 0.22em;
+    padding-left: 0.22em;
+    font-size: clamp(2.6rem, 11vw, 3.85rem);
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(100%, 22rem);
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .space__main-title {
+    letter-spacing: 0.12em;
+    padding-left: 0.12em;
+    font-size: clamp(2.1rem, 9vw, 2.75rem);
+  }
+
+  .section__intro,
+  .section__text {
+    max-width: 100%;
+  }
+
+  .booking-slot__btn {
+    min-height: 2.25rem;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .evo__mega {
+    letter-spacing: 0.1em;
+    padding-left: 0.1em;
+    font-size: clamp(1.55rem, 6.2vw, 2.15rem);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .nav__burger,
+  .lang-switcher__btn,
+  .rez-datebar__btn,
+  .rez-slot__btn,
+  .rez-cart__chip-remove,
+  .rez-confirm__close,
+  .room-tile {
+    touch-action: manipulation;
+  }
+}
+
+video {
+  max-width: 100%;
+  height: auto;
 }
