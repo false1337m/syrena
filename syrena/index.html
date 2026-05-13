@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SYRENA — luksusowy klub karaoke w sercu nocy. Pokoje, bar, rezerwacja." />
+  <title>SYRENA — Klub Karaoke</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#hero" data-i18n="skip.content">Przejdź do treści</a>
+  <div class="lang-switcher" role="group" data-i18n-aria-label="lang.switcher_aria">
+    <button type="button" class="lang-switcher__btn is-active" data-lang="pl" aria-pressed="true">
+      <span class="lang-switcher__flag" aria-hidden="true">🇵🇱</span><span class="visually-hidden" data-i18n="lang.pl">Polski</span>
+    </button>
+    <button type="button" class="lang-switcher__btn" data-lang="en" aria-pressed="false">
+      <span class="lang-switcher__flag" aria-hidden="true">🇬🇧</span><span class="visually-hidden" data-i18n="lang.en">English</span>
+    </button>
+    <button type="button" class="lang-switcher__btn" data-lang="uk" aria-pressed="false">
+      <span class="lang-switcher__flag" aria-hidden="true">🇺🇦</span><span class="visually-hidden" data-i18n="lang.uk">Українська</span>
+    </button>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__orb ambient__orb--1"></div>
+    <div class="ambient__orb ambient__orb--2"></div>
+    <div class="ambient__orb ambient__orb--3"></div>
+    <div class="ambient__bubbles"></div>
+    <div class="ambient__rays"></div>
+  </div>
+
+  <div class="site" id="site">
+    <header class="header" data-header>
+      <div class="header__inner">
+        <a class="logo" href="#hero">SYRENA</a>
+        <nav class="nav" aria-label="Nawigacja strony" data-i18n-aria-label="nav.aria">
+          <a class="nav__link" href="#przestrzen" data-i18n="nav.space">Przestrzeń</a>
+          <a class="nav__link" href="#pokoje" data-i18n="nav.rooms">Pokoje</a>
+          <a class="nav__link" href="#bar" data-i18n="nav.bar">Bar</a>
+          <a class="nav__link" href="#evolution" data-i18n="nav.evolution">Evolution</a>
+          <a class="nav__link" href="#eventy" data-i18n="nav.events">Eventy</a>
+          <a class="nav__link" href="#atmosfera" data-i18n="nav.atmosphere">Atmosfera</a>
+          <a class="nav__link" href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+        <a class="btn btn--nav" href="rezerwacja-pokoju.html" data-i18n="nav.book">Zarezerwuj</a>
+        <button type="button" class="nav__burger" aria-label="Menu" data-i18n-aria-label="nav.menu_toggle" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+      <div class="nav__drawer" data-nav-drawer hidden>
+        <a class="nav__drawer-link" href="#przestrzen" data-i18n="nav.space">Przestrzeń</a>
+        <a class="nav__drawer-link" href="#pokoje" data-i18n="nav.rooms">Pokoje</a>
+        <a class="nav__drawer-link" href="#bar" data-i18n="nav.bar">Bar</a>
+        <a class="nav__drawer-link" href="#evolution" data-i18n="nav.evolution">Evolution</a>
+        <a class="nav__drawer-link" href="#eventy" data-i18n="nav.events">Eventy</a>
+        <a class="nav__drawer-link" href="#atmosfera" data-i18n="nav.atmosphere">Atmosfera</a>
+        <a class="nav__drawer-link" href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+        <a class="btn btn--primary btn--block" href="rezerwacja-pokoju.html" data-i18n="nav.book">Zarezerwuj</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero" data-reveal-chain>
+        <div class="hero__symbol" aria-hidden="true">
+          <svg class="hero__wave" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="hero__wave-path" d="M0 72 Q100 28 200 72 T400 72" stroke="currentColor" stroke-width="0.45" fill="none" />
+            <path class="hero__wave-path hero__wave-path--2" d="M0 90 Q130 50 260 90 T400 90" stroke="currentColor" stroke-width="0.35" fill="none" />
+          </svg>
+          <div class="hero__ripples"><span></span><span></span><span></span></div>
+        </div>
+        <p class="eyebrow reveal" data-i18n="hero.eyebrow">Karaoke · noc · głębia</p>
+        <h1 class="hero__title reveal">SYRENA</h1>
+        <p class="hero__lead reveal" data-i18n="hero.lead">
+          Luksusowa przestrzeń dźwięku i światła — jak jedwabna fala pod powierzchnią. Tu noc pachnie solą i muzyką.
+        </p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="rezerwacja-pokoju.html" data-i18n="hero.book">Zarezerwuj</a>
+          <a class="btn btn--ghost" href="#pokoje" data-i18n="hero.rooms">Zobacz pokoje</a>
+        </div>
+      </section>
+
+      <section class="space" id="przestrzen" aria-labelledby="space-kicker space-title">
+        <div class="space__deco" aria-hidden="true">
+          <div class="space__deco-wave space__deco-wave--1"></div>
+          <div class="space__deco-wave space__deco-wave--2"></div>
+          <div class="space__deco-glow"></div>
+        </div>
+        <div class="section__inner space__inner" data-reveal-chain>
+          <header class="space__header">
+            <p class="space__kicker reveal" id="space-kicker" data-i18n="space.kicker">Nasza</p>
+            <h2 class="space__main-title reveal" id="space-title" data-i18n="space.title">PRZESTRZEŃ</h2>
+            <p class="space__sub reveal" data-i18n="space.sub">
+              Wybierz strefę — każda prowadzi w inną głębię wieczoru. Dotknij karty, by zanurzyć się dalej.
+            </p>
+          </header>
+
+          <div class="space__panel">
+            <nav class="space__grid" aria-label="Strefy SYRENA" data-i18n-aria-label="space.zones_aria">
+              <a class="space-card reveal" href="#pokoje">
+                <span class="space-card__tab" data-i18n="space.tab_karaoke">pokoje karaoke</span>
+                <div class="space-card__canvas">
+                  <svg class="space-card__icon" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path class="space-card__stroke" d="M52 28c0-6 6-10 12-10s12 4 12 10v32c0 6-6 10-12 10s-12-4-12-10V28z" stroke-linecap="round" />
+                    <path class="space-card__stroke" d="M64 60v20M56 80h16" stroke-linecap="round" />
+                    <path class="space-card__stroke space-card__stroke--wave" d="M18 96c10-8 20 8 30 0s20 8 30 0 20 8 30 0" stroke-linecap="round" />
+                    <path class="space-card__stroke" d="M78 38l8-6M86 46l6-8M90 34l-6-6" stroke-linecap="round" />
+                    <circle class="space-card__stroke" cx="34" cy="42" r="3" />
+                    <path class="space-card__stroke" d="M34 45v14M31 52h6" stroke-linecap="round" />
+                    <circle class="space-card__stroke" cx="94" cy="52" r="2.5" />
+                    <path class="space-card__stroke" d="M94 54.5v10M92 58h4" stroke-linecap="round" />
+                  </svg>
+                </div>
+              </a>
+
+              <a class="space-card space-card--bar reveal" href="#bar">
+                <span class="space-card__tab space-card__tab--gold" data-i18n="space.tab_bar">bar</span>
+                <div class="space-card__canvas">
+                  <svg class="space-card__icon" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path class="space-card__stroke" d="M44 36h32l-4 44H48L44 36z" stroke-linejoin="round" />
+                    <path class="space-card__stroke" d="M48 80h24" stroke-linecap="round" />
+                    <path class="space-card__stroke" d="M60 36v-8" stroke-linecap="round" />
+                    <ellipse class="space-card__stroke" cx="60" cy="24" rx="10" ry="3" />
+                    <path class="space-card__stroke space-card__stroke--wave" d="M22 100c12-6 24 6 38 0s26 6 38 0" stroke-linecap="round" />
+                    <circle class="space-card__stroke space-card__stroke--accent" cx="72" cy="52" r="4" stroke-linecap="round" />
+                  </svg>
+                </div>
+              </a>
+
+              <a class="space-card reveal" href="#eventy">
+                <span class="space-card__tab" data-i18n="space.tab_events">eventy</span>
+                <div class="space-card__canvas">
+                  <svg class="space-card__icon" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect class="space-card__stroke" x="38" y="44" width="44" height="40" rx="3" stroke-linejoin="round" />
+                    <path class="space-card__stroke" d="M38 52h44M60 44v-10" stroke-linecap="round" />
+                    <path class="space-card__stroke" d="M52 34c0-4 3.5-7 8-7s8 3 8 7" stroke-linecap="round" />
+                    <path class="space-card__stroke" d="M52 34h16" stroke-linecap="round" />
+                    <path class="space-card__stroke" d="M22 32l4 4M26 28l-4 4M98 30l-3 5M101 26l-5 3" stroke-linecap="round" />
+                    <path class="space-card__stroke" d="M60 92v12M54 100h12" stroke-linecap="round" />
+                    <ellipse class="space-card__stroke" cx="60" cy="108" rx="8" ry="3" />
+                  </svg>
+                </div>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pokoje">
+        <div class="section__inner" data-reveal-chain>
+          <p class="eyebrow reveal" data-i18n="rooms.eyebrow">Przestrzenie</p>
+          <h2 class="section__title reveal" data-i18n="rooms.title">Pokoje karaoke</h2>
+          <p class="section__intro reveal" data-i18n="rooms.intro">
+            Wybierz salę dopasowaną do nastroju — każda ma inną skalę światła i ciszy między nutami.
+          </p>
+          <div class="room-grid room-grid--three">
+            <a class="room-tile reveal" href="rezerwacja-pokoju.html?room=perla">
+              <div class="room-tile__visual room-tile__visual--perla" role="presentation"></div>
+              <div class="room-tile__body">
+                <h3 class="room-tile__name" data-i18n="rooms.perla.name">Pokój Perła</h3>
+                <p class="room-tile__meta" data-i18n="rooms.perla.meta">1–3 os.</p>
+                <p class="room-tile__desc" data-i18n="rooms.perla.desc">Najmniejsza, najbardziej kameralna scena — jak muszla zamknięta na dwójkę lub trójkę głosów.</p>
+                <span class="room-tile__cta" data-i18n="rooms.reserve">Zarezerwuj</span>
+              </div>
+            </a>
+            <a class="room-tile reveal" href="rezerwacja-pokoju.html?room=fala">
+              <div class="room-tile__visual room-tile__visual--fala" role="presentation"></div>
+              <div class="room-tile__body">
+                <h3 class="room-tile__name" data-i18n="rooms.fala.name">Pokój Fala</h3>
+                <p class="room-tile__meta" data-i18n="rooms.fala.meta">1–6 os.</p>
+                <p class="room-tile__desc" data-i18n="rooms.fala.desc">Średnia przestrzeń: wygodna kanapa, światło sceniczne i miejsce na swobodny ruch przy mikrofonie.</p>
+                <span class="room-tile__cta" data-i18n="rooms.reserve">Zarezerwuj</span>
+              </div>
+            </a>
+            <a class="room-tile reveal" href="rezerwacja-pokoju.html?room=syrena">
+              <div class="room-tile__visual room-tile__visual--syrena" role="presentation"></div>
+              <div class="room-tile__body">
+                <h3 class="room-tile__name" data-i18n="rooms.syrena.name">Pokój Syrena</h3>
+                <p class="room-tile__meta" data-i18n="rooms.syrena.meta">1–6 os.</p>
+                <p class="room-tile__desc" data-i18n="rooms.syrena.desc">Ta sama skala co Fala — inna aranżacja światła i akustyki, syreni zmysł dla wieczoru z przyjaciółmi.</p>
+                <span class="room-tile__cta" data-i18n="rooms.reserve">Zarezerwuj</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="bar">
+        <div class="section__inner section__inner--split" data-reveal-chain>
+          <div>
+            <p class="eyebrow reveal" data-i18n="bar.eyebrow">Napoje</p>
+            <h2 class="section__title reveal" data-i18n="bar.title">Bar i koktajle</h2>
+            <p class="section__text reveal" data-i18n="bar.text">
+              Kompozycje autorskie na bazie czystych destylatów, delikatna słodycz i dym — jak refleks światła na szkle.
+              Obsługa dowozi zamówienia do pokoi, by nie przerywać rytmu wieczoru.
+            </p>
+            <button type="button" class="btn btn--primary reveal" data-open-menu aria-haspopup="dialog" aria-controls="menu-modal" data-i18n="bar.menu">
+              MENU
+            </button>
+          </div>
+          <div class="bar-panel reveal" role="presentation" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="section section--evo" id="evolution" data-evo-section>
+        <div class="section__inner section__inner--evo-max">
+          <header class="evo__top" data-reveal-chain>
+            <h2 class="evo__mega reveal" data-i18n="evo.heading">EVOLUTION KARAOKE</h2>
+            <p class="evo__subtitle reveal" data-i18n="evo.subtitle">Profesjonalny system karaoke nowej generacji</p>
+            <p class="evo__intro reveal" data-i18n="evo.desc">
+              W SYRENA korzystamy z nowoczesnego systemu Evolution Karaoke, który zapewnia płynną obsługę, profesjonalne brzmienie oraz dostęp do ogromnej biblioteki utworów. Wszystko zostało stworzone z myślą o wyjątkowym doświadczeniu muzycznym.
+            </p>
+            <div class="evo__divider reveal" aria-hidden="true">
+              <span class="evo__divider-line"></span>
+              <span class="evo__divider-glow"></span>
+            </div>
+          </header>
+
+          <div class="evo__split" data-reveal-chain>
+            <div class="evo__col evo__col--cards">
+              <ul class="evo-fcards">
+                <li class="evo-fcards__item">
+                  <article class="evo-fcard reveal">
+                  <div class="evo-fcard__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 22V10l10-2v12" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M10 14h10M10 18h7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.65" />
+                      <circle cx="23" cy="23" r="3.5" stroke="currentColor" stroke-width="1.25" />
+                    </svg>
+                  </div>
+                  <div class="evo-fcard__body">
+                    <h3 class="evo-fcard__title" data-i18n="evo.card1.title">Ogromna biblioteka utworów</h3>
+                    <p class="evo-fcard__text" data-i18n="evo.card1.body">Tysiące polskich i zagranicznych hitów dostępnych w jednym systemie.</p>
+                  </div>
+                  </article>
+                </li>
+                <li class="evo-fcards__item">
+                  <article class="evo-fcard reveal">
+                  <div class="evo-fcard__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 18c0-4 3.5-7 8-7s8 3 8 7v4H8v-4z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round" />
+                      <path d="M11 22v3M16 22v4M21 22v3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+                      <path d="M5 14c2-4 6-6 11-6s9 2 11 6" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.45" />
+                    </svg>
+                  </div>
+                  <div class="evo-fcard__body">
+                    <h3 class="evo-fcard__title" data-i18n="evo.card2.title">Profesjonalne audio</h3>
+                    <p class="evo-fcard__text" data-i18n="evo.card2.body">Czyste brzmienie, głęboki bas i wysoka jakość dźwięku.</p>
+                  </div>
+                  </article>
+                </li>
+                <li class="evo-fcards__item">
+                  <article class="evo-fcard reveal">
+                  <div class="evo-fcard__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 6v14M12 24h8" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" />
+                      <rect x="13" y="4" width="6" height="10" rx="3" stroke="currentColor" stroke-width="1.25" />
+                      <path d="M11 26h10v2H11v-2z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="evo-fcard__body">
+                    <h3 class="evo-fcard__title" data-i18n="evo.card3.title">Bezprzewodowe mikrofony</h3>
+                    <p class="evo-fcard__text" data-i18n="evo.card3.body">Swoboda śpiewania i pełny komfort podczas każdej rezerwacji.</p>
+                  </div>
+                  </article>
+                </li>
+                <li class="evo-fcards__item">
+                  <article class="evo-fcard reveal">
+                  <div class="evo-fcard__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="6" y="7" width="20" height="18" rx="2.5" stroke="currentColor" stroke-width="1.25" />
+                      <path d="M11 22h10M11 18h6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.55" />
+                      <circle cx="12.5" cy="12.5" r="1.2" fill="currentColor" opacity="0.85" />
+                      <circle cx="16" cy="12.5" r="1.2" fill="currentColor" opacity="0.55" />
+                      <circle cx="19.5" cy="12.5" r="1.2" fill="currentColor" opacity="0.35" />
+                    </svg>
+                  </div>
+                  <div class="evo-fcard__body">
+                    <h3 class="evo-fcard__title" data-i18n="evo.card4.title">Nowoczesne sterowanie</h3>
+                    <p class="evo-fcard__text" data-i18n="evo.card4.body">Intuicyjny interfejs umożliwiający szybki wybór utworów.</p>
+                  </div>
+                  </article>
+                </li>
+                <li class="evo-fcards__item">
+                  <article class="evo-fcard reveal">
+                  <div class="evo-fcard__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23 10a7 7 0 00-12 5h4a3 3 0 016 0c0 2-2 3-4 3h-1v3h2c3 0 6-2 6-6a7 7 0 00-1-5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+                      <path d="M9 22a7 7 0 0012-5h-4a3 3 0 10-6 0c0 2 2 3 4 3h1v3h-2c-3 0-6-2-6-6a7 7 0 011-5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" opacity="0.75" />
+                    </svg>
+                  </div>
+                  <div class="evo-fcard__body">
+                    <h3 class="evo-fcard__title" data-i18n="evo.card5.title">Regularne aktualizacje</h3>
+                    <p class="evo-fcard__text" data-i18n="evo.card5.body">System stale otrzymuje nowe utwory i aktualizacje muzyczne.</p>
+                  </div>
+                  </article>
+                </li>
+                <li class="evo-fcards__item">
+                  <article class="evo-fcard reveal">
+                  <div class="evo-fcard__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 26V14l6-8 6 8v12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M14 26v-6M18 26v-8M22 26v-5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.55" />
+                      <circle cx="16" cy="10" r="2" stroke="currentColor" stroke-width="1.15" />
+                    </svg>
+                  </div>
+                  <div class="evo-fcard__body">
+                    <h3 class="evo-fcard__title" data-i18n="evo.card6.title">Sceniczne doświadczenie</h3>
+                    <p class="evo-fcard__text" data-i18n="evo.card6.body">Efekty świetlne i profesjonalna atmosfera prawdziwego karaoke lounge.</p>
+                  </div>
+                </article>
+                </li>
+              </ul>
+            </div>
+
+            <div class="evo__col evo__col--stage">
+              <div class="evo__visual" aria-hidden="true">
+                <div class="evo__visual-inner">
+                  <div class="evo__blobs">
+                    <span class="evo__blob evo__blob--1"></span>
+                    <span class="evo__blob evo__blob--2"></span>
+                    <span class="evo__blob evo__blob--3"></span>
+                  </div>
+                  <div class="evo__beams" data-evo-parallax="-0.12"></div>
+                  <div class="evo__glow"></div>
+                  <div class="evo__particles">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  </div>
+              <svg class="evo__waves" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-evo-parallax="-0.18">
+                <path
+                  class="evo__wave-path"
+                  d="M0 140 C80 60 160 200 200 120 S320 40 400 100"
+                  stroke="url(#evo-wave-grad)"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="evo__wave-path evo__wave-path--2"
+                  d="M0 170 C100 90 200 190 280 130 S360 80 400 150"
+                  stroke="url(#evo-wave-grad2)"
+                  stroke-width="0.85"
+                  stroke-linecap="round"
+                  opacity="0.65"
+                />
+                <path
+                  class="evo__wave-path evo__wave-path--3"
+                  d="M0 110 C120 180 220 40 320 130 S380 170 400 90"
+                  stroke="url(#evo-wave-grad)"
+                  stroke-width="0.7"
+                  stroke-linecap="round"
+                  opacity="0.45"
+                />
+                <defs>
+                  <linearGradient id="evo-wave-grad" x1="0" y1="0" x2="400" y2="0">
+                    <stop offset="0%" stop-color="rgba(45,212,191,0.05)" />
+                    <stop offset="35%" stop-color="rgba(45,212,191,0.55)" />
+                    <stop offset="65%" stop-color="rgba(201,169,98,0.35)" />
+                    <stop offset="100%" stop-color="rgba(45,212,191,0.08)" />
+                  </linearGradient>
+                  <linearGradient id="evo-wave-grad2" x1="400" y1="0" x2="0" y2="0">
+                    <stop offset="0%" stop-color="rgba(16,185,129,0.2)" />
+                    <stop offset="50%" stop-color="rgba(45,212,191,0.5)" />
+                    <stop offset="100%" stop-color="rgba(16,185,129,0.15)" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <div class="evo__glass-wrap evo__glass-wrap--main" data-evo-parallax="-0.32">
+                <div class="evo__glass evo__glass--main">
+                  <div class="evo__glass-header">
+                    <span class="evo__glass-dot"></span>
+                    <span class="evo__glass-dot"></span>
+                    <span class="evo__glass-dot"></span>
+                  </div>
+                  <div class="evo__eq" role="presentation">
+                    <span class="evo__eq-bar"></span>
+                    <span class="evo__eq-bar"></span>
+                    <span class="evo__eq-bar"></span>
+                    <span class="evo__eq-bar"></span>
+                    <span class="evo__eq-bar"></span>
+                    <span class="evo__eq-bar"></span>
+                    <span class="evo__eq-bar"></span>
+                  </div>
+                  <div class="evo__glass-line"></div>
+                  <div class="evo__glass-line evo__glass-line--short"></div>
+                </div>
+              </div>
+
+              <div class="evo__glass-wrap evo__glass-wrap--float" data-evo-parallax="0.44">
+                <div class="evo__glass evo__glass--float">
+                  <div class="evo__glass-float-row"></div>
+                  <div class="evo__glass-float-row evo__glass-float-row--dim"></div>
+                </div>
+              </div>
+
+              <div class="evo__mics">
+                <div class="evo__mic-wrap" data-evo-parallax="0.52">
+                  <svg class="evo__mic" viewBox="0 0 56 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="evo-mic-a" x1="28" y1="8" x2="28" y2="120">
+                      <stop offset="0%" stop-color="#2dd4bf" />
+                      <stop offset="55%" stop-color="#10b981" />
+                      <stop offset="100%" stop-color="#c9a962" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="22" y="18" width="12" height="44" rx="6" stroke="url(#evo-mic-a)" stroke-width="1.35" fill="rgba(2,6,17,0.35)" />
+                  <path d="M28 62v28M18 96h20" stroke="url(#evo-mic-a)" stroke-width="1.35" stroke-linecap="round" />
+                  <path d="M22 98h12l-2 22H24l-2-22z" fill="rgba(5,13,31,0.65)" stroke="rgba(45,212,191,0.25)" stroke-width="0.85" />
+                </svg>
+                </div>
+                <div class="evo__mic-wrap evo__mic-wrap--mirror" data-evo-parallax="0.36">
+                  <svg class="evo__mic evo__mic--mirror" viewBox="0 0 56 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="evo-mic-b" x1="28" y1="8" x2="28" y2="120">
+                      <stop offset="0%" stop-color="#c9a962" />
+                      <stop offset="40%" stop-color="#2dd4bf" />
+                      <stop offset="100%" stop-color="#10b981" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="22" y="22" width="12" height="44" rx="6" stroke="url(#evo-mic-b)" stroke-width="1.35" fill="rgba(2,6,17,0.35)" />
+                  <path d="M28 66v28M18 100h20" stroke="url(#evo-mic-b)" stroke-width="1.35" stroke-linecap="round" />
+                  <path d="M22 102h12l-2 22H24l-2-22z" fill="rgba(5,13,31,0.65)" stroke="rgba(201,169,98,0.22)" stroke-width="0.85" />
+                </svg>
+                </div>
+              </div>
+
+              <div class="evo__sheen" data-evo-parallax="-0.42"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="eventy">
+        <div class="section__inner section__inner--split" data-reveal-chain>
+          <div>
+            <p class="eyebrow reveal" data-i18n="events.eyebrow">Wydarzenia</p>
+            <h2 class="section__title reveal" data-i18n="events.title">Eventy</h2>
+            <p class="section__text reveal" data-i18n="events.p1">
+              Urodziny, wieczory panieńskie, spotkania firmowe i kameralne premiery — dopasujemy światło, dźwięk i strefę VIP do skali Twojego święta.
+              Zespół SYRENA prowadzi Cię od pierwszego maila po ostatni toast.
+            </p>
+            <p class="section__text reveal" data-i18n="events.p2">
+              Zapytaj o pakiet: scenariusz wieczoru, catering z baru i fotografię w tonacji nocnej głębi.
+            </p>
+            <button type="button" class="btn btn--primary reveal" data-open-booking data-i18n="events.cta">Zapytaj o termin</button>
+          </div>
+          <div class="events-panel reveal" role="presentation" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="section" id="atmosfera">
+        <div class="section__inner" data-reveal-chain>
+          <p class="eyebrow reveal" data-i18n="atmo.eyebrow">Światło i cisza</p>
+          <h2 class="section__title reveal" data-i18n="atmo.title">Atmosfera</h2>
+          <p class="section__intro reveal" data-i18n="atmo.intro">
+            Symboliczne fale, stonowany blask i detale, które nie krzyczą — tylko prowadzą wzrok w głąb nocy.
+          </p>
+          <div class="gallery">
+            <figure class="gallery__cell reveal"><div class="gallery__ph"><span data-i18n="atmo.g1">Światło sceniczne</span></div></figure>
+            <figure class="gallery__cell reveal"><div class="gallery__ph"><span data-i18n="atmo.g2">Bar</span></div></figure>
+            <figure class="gallery__cell gallery__cell--wide reveal"><div class="gallery__ph"><span data-i18n="atmo.g3">Pokój karaoke</span></div></figure>
+            <figure class="gallery__cell reveal"><div class="gallery__ph"><span data-i18n="atmo.g4">Detal</span></div></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="kontakt">
+        <div class="section__inner section__inner--narrow" data-reveal-chain>
+          <p class="eyebrow reveal" data-i18n="contact.eyebrow">Kontakt</p>
+          <h2 class="section__title reveal" data-i18n="contact.title">Zapytaj nas</h2>
+          <div class="contact-card reveal">
+            <p class="contact-card__row"><strong data-i18n="contact.addr_label">Adres</strong><br /><span data-i18n="contact.addr_value">ul. Przykładowa 12, 00-001 Warszawa</span></p>
+            <p class="contact-card__row"><strong data-i18n="contact.phone_label">Telefon</strong><br /><a class="link" href="tel:+48123456789">+48 123 456 789</a></p>
+            <p class="contact-card__row contact-card__row--last">
+              <strong data-i18n="contact.social_label">Social</strong><br />
+              <a class="link" href="#" rel="noopener noreferrer">Instagram</a> · <a class="link" href="#" rel="noopener noreferrer">Facebook</a>
+            </p>
+          </div>
+          <button type="button" class="btn btn--primary reveal" data-open-booking data-i18n="contact.cta">Zarezerwuj wizytę</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__brand">SYRENA</span>
+      <p class="footer__copy" data-i18n="footer.rights">© {{year}} SYRENA. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+  </div>
+
+  <!-- Pełnoekranowy widok rezerwacji (oddzielny od strony głównej) -->
+  <div
+    class="booking"
+    id="booking-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="booking-title"
+    aria-hidden="true"
+    hidden
+    inert
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="booking__defs" aria-hidden="true" focusable="false" width="0" height="0">
+      <symbol id="booking-icon-lock" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.35"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8 11V8a4 4 0 018 0v3M6 11h12v10H6z"
+        />
+      </symbol>
+    </svg>
+    <button type="button" class="booking__back reveal" data-close-booking>
+      <span aria-hidden="true">←</span> <span data-i18n="booking.back">Wróć</span>
+    </button>
+
+    <div class="booking__viewport">
+      <div class="booking__intro">
+        <p class="booking__brand reveal" id="booking-title">SYRENA</p>
+        <p class="booking__tagline reveal" data-i18n="booking.tagline">Rezerwacja pokoju</p>
+
+        <div class="booking__controls reveal" role="toolbar" data-i18n-aria-label="booking.toolbar_aria" aria-label="Wybór daty">
+          <button type="button" class="booking__chip" data-date-today data-i18n="booking.today">Dziś</button>
+          <button type="button" class="booking__date-btn" data-date-open data-i18n-aria-label="booking.pick_date_aria" aria-label="Wybierz datę z kalendarza">
+            <svg class="booking__cal-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.35" />
+              <path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" />
+            </svg>
+            <span data-i18n="booking.date_word">data</span>
+          </button>
+          <button type="button" class="booking__arrow" data-date-prev data-i18n-aria-label="booking.prev_aria" aria-label="Poprzedni dzień">‹</button>
+          <button type="button" class="booking__arrow" data-date-next data-i18n-aria-label="booking.next_aria" aria-label="Następny dzień">›</button>
+          <p class="booking__date-inline reveal" data-date-line aria-live="polite"></p>
+          <input class="booking__date-input visually-hidden" type="date" data-date-input tabindex="-1" aria-hidden="true" />
+        </div>
+
+        <p class="booking__summary reveal" data-booking-summary>
+          <strong data-i18n="booking.summary_label">Wybrany termin:</strong> <span data-booking-summary-detail aria-live="polite">brak</span>
+        </p>
+      </div>
+
+      <div class="booking__matrix-wrap">
+        <div class="booking__matrix" data-i18n-aria-label="booking.matrix_aria" aria-label="Pokoje i siatka rezerwacji">
+          <!-- Wiersz 1 — Perła -->
+          <div class="booking__pair">
+            <button type="button" class="booking-room-card booking-room-card--perla reveal" data-booking-room="perla" data-grid-row="1">
+              <span class="booking-room-card__media" aria-hidden="true"></span>
+              <span class="booking-room-card__shade" aria-hidden="true"></span>
+              <span class="booking-room-card__text">
+                <span class="booking-room-card__kicker" data-i18n="booking.room_kicker">Pokój</span>
+                <span class="booking-room-card__name" data-i18n="rooms.perla.short">Perła</span>
+              </span>
+              <span class="booking-room-card__badge" data-i18n="booking.badge_13">1 – 3 os.</span>
+            </button>
+            <div class="booking-grid__track reveal" data-grid-row="1">
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="perla" data-time="18:00" data-price="90" data-slot-label="18:00–19:00" role="button" tabindex="0" aria-label="Pokój Perła, 18:00–19:00, 90 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">18:00–19:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">90</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="perla" data-time="19:00" data-price="90" data-slot-label="19:00–20:00" role="button" tabindex="0" aria-label="Pokój Perła, 19:00–20:00, 90 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">19:00–20:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">90</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="perla" data-time="20:00" data-price="90" data-slot-label="20:00–21:00" role="button" tabindex="0" aria-label="Pokój Perła, 20:00–21:00, 90 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">20:00–21:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">90</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="perla" data-time="21:00" data-price="90" data-slot-label="21:00–22:00" role="button" tabindex="0" aria-label="Pokój Perła, 21:00–22:00, 90 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">21:00–22:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">90</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="perla" data-time="22:00" data-price="90" data-slot-label="22:00–23:00" role="button" tabindex="0" aria-label="Pokój Perła, 22:00–23:00, 90 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">22:00–23:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">90</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="perla" data-time="23:00" data-price="90" data-slot-label="23:00–00:00" role="button" tabindex="0" aria-label="Pokój Perła, 23:00–00:00, 90 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">23:00–00:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">90</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wiersz 2 — Fala -->
+          <div class="booking__pair">
+            <button type="button" class="booking-room-card booking-room-card--fala reveal" data-booking-room="fala" data-grid-row="2">
+              <span class="booking-room-card__media" aria-hidden="true"></span>
+              <span class="booking-room-card__shade" aria-hidden="true"></span>
+              <span class="booking-room-card__text">
+                <span class="booking-room-card__kicker" data-i18n="booking.room_kicker">Pokój</span>
+                <span class="booking-room-card__name" data-i18n="rooms.fala.short">Fala</span>
+              </span>
+              <span class="booking-room-card__badge" data-i18n="booking.badge_16">1 – 6 os.</span>
+            </button>
+            <div class="booking-grid__track reveal" data-grid-row="2">
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="fala" data-time="18:00" data-price="100" data-slot-label="18:00–19:00" role="button" tabindex="0" aria-label="Pokój Fala, 18:00–19:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">18:00–19:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="fala" data-time="19:00" data-price="100" data-slot-label="19:00–20:00" role="button" tabindex="0" aria-label="Pokój Fala, 19:00–20:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">19:00–20:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="fala" data-time="20:00" data-price="100" data-slot-label="20:00–21:00" role="button" tabindex="0" aria-label="Pokój Fala, 20:00–21:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">20:00–21:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="fala" data-time="21:00" data-price="100" data-slot-label="21:00–22:00" role="button" tabindex="0" aria-label="Pokój Fala, 21:00–22:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">21:00–22:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="fala" data-time="22:00" data-price="100" data-slot-label="22:00–23:00" role="button" tabindex="0" aria-label="Pokój Fala, 22:00–23:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">22:00–23:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="fala" data-time="23:00" data-price="100" data-slot-label="23:00–00:00" role="button" tabindex="0" aria-label="Pokój Fala, 23:00–00:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">23:00–00:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wiersz 3 — Syrena -->
+          <div class="booking__pair">
+            <button type="button" class="booking-room-card booking-room-card--syrena reveal" data-booking-room="syrena" data-grid-row="3">
+              <span class="booking-room-card__media" aria-hidden="true"></span>
+              <span class="booking-room-card__shade" aria-hidden="true"></span>
+              <span class="booking-room-card__text">
+                <span class="booking-room-card__kicker" data-i18n="booking.room_kicker">Pokój</span>
+                <span class="booking-room-card__name" data-i18n="rooms.syrena.short">Syrena</span>
+              </span>
+              <span class="booking-room-card__badge" data-i18n="booking.badge_16">1 – 6 os.</span>
+            </button>
+            <div class="booking-grid__track reveal" data-grid-row="3">
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="syrena" data-time="18:00" data-price="100" data-slot-label="18:00–19:00" role="button" tabindex="0" aria-label="Pokój Syrena, 18:00–19:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">18:00–19:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="syrena" data-time="19:00" data-price="100" data-slot-label="19:00–20:00" role="button" tabindex="0" aria-label="Pokój Syrena, 19:00–20:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">19:00–20:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="syrena" data-time="20:00" data-price="100" data-slot-label="20:00–21:00" role="button" tabindex="0" aria-label="Pokój Syrena, 20:00–21:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">20:00–21:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="syrena" data-time="21:00" data-price="100" data-slot-label="21:00–22:00" role="button" tabindex="0" aria-label="Pokój Syrena, 21:00–22:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">21:00–22:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="syrena" data-time="22:00" data-price="100" data-slot-label="22:00–23:00" role="button" tabindex="0" aria-label="Pokój Syrena, 22:00–23:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">22:00–23:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+              <div class="booking-grid__cell reveal" data-booking-slot data-room-row="syrena" data-time="23:00" data-price="100" data-slot-label="23:00–00:00" role="button" tabindex="0" aria-label="Pokój Syrena, 23:00–00:00, 100 zł. Wybierz termin lub zarezerwuj.">
+                <div class="booking-slot__available">
+                  <span class="booking-slot__time">23:00–00:00</span>
+                  <span class="booking-slot__price"><span class="booking-slot__amt">100</span> <span data-i18n="booking.currency">zł</span></span>
+                  <button type="button" class="booking-slot__btn" data-i18n="booking.reserve">Rezerwuj</button>
+                </div>
+                <div class="booking-slot__reserved" aria-hidden="true">
+                  <svg class="booking-slot__lock" width="26" height="26" aria-hidden="true"><use href="#booking-icon-lock" /></svg>
+                  <span class="booking-slot__reserved-text" data-i18n="booking.busy">Zajęte</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking__footer reveal">
+        <button type="button" class="btn btn--primary booking__confirm" data-confirm-booking data-i18n="booking.confirm">Potwierdź rezerwację</button>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="voucher-fab" data-open-voucher data-i18n-aria-label="voucher.fab_aria" aria-label="Voucher prezentowy SYRENA" aria-haspopup="dialog" aria-controls="voucher-modal">
+    <svg class="voucher-fab__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M4 10.5V19a1 1 0 001 1h14a1 1 0 001-1v-8.5M4 10.5V8a1 1 0 011-1h3.17M4 10.5h16m0 0V8a1 1 0 00-1-1h-3.17M20 10.5l-1.64-1.64a1 1 0 00-1.41 0L12 14l-4.95-4.14a1 1 0 00-1.41 0L4 10.5m8-6v3M9 7.5h6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <span class="voucher-fab__label" data-i18n="voucher.label">Voucher</span>
+  </button>
+
+  <div class="voucher-modal" id="voucher-modal" role="dialog" aria-modal="true" aria-labelledby="voucher-modal-title" aria-hidden="true" data-voucher-modal>
+    <div class="voucher-modal__backdrop" data-close-voucher tabindex="-1" aria-hidden="true"></div>
+    <div class="voucher-modal__dialog">
+      <button type="button" class="voucher-modal__close" data-close-voucher data-i18n-aria-label="voucher.close_aria" aria-label="Zamknij">×</button>
+      <h3 class="voucher-modal__title" id="voucher-modal-title" data-i18n="voucher.title">Voucher SYRENA</h3>
+      <p class="voucher-modal__text" data-i18n="voucher.text">
+        Podaruj wieczór w głębinie dźwięku: voucher na pokój karaoke, bar lub pakiet eventowy. Kwota i data ważności ustalane indywidualnie.
+      </p>
+      <p class="voucher-modal__hint" data-i18n="voucher.hint">To wersja demonstracyjna strony — zakupu jeszcze nie ma w systemie.</p>
+      <button type="button" class="btn btn--primary btn--block" data-voucher-buy data-i18n="voucher.buy">Kup voucher</button>
+    </div>
+  </div>
+
+  <!-- Pełnoekranowe menu baru -->
+  <div class="menu-modal" id="menu-modal" role="dialog" aria-modal="true" aria-labelledby="menu-modal-title" aria-hidden="true" hidden data-menu-modal>
+    <div class="menu-modal__backdrop" data-close-menu tabindex="-1" aria-hidden="true"></div>
+    <div class="menu-modal__panel" role="document">
+      <header class="menu-modal__header">
+        <button type="button" class="menu-modal__back" data-close-menu>
+          <span aria-hidden="true">←</span> <span data-i18n="menu.back">Wróć na stronę</span>
+        </button>
+        <div class="menu-modal__title-wrap">
+          <p class="menu-modal__kicker" data-i18n="menu.title_kicker">SYRENA</p>
+          <h2 class="menu-modal__title" id="menu-modal-title" data-i18n="menu.title">MENU KARAOKE</h2>
+        </div>
+      </header>
+
+      <div class="menu-modal__content">
+        <section class="menu-featured menu-reveal" data-i18n-aria-label="menu.featured_aria" aria-label="Wyróżnione koktajle">
+          <div class="menu-featured__grid">
+            <article class="featured-drink featured-drink--aperol" tabindex="0" data-i18n-aria-label="menu.featured_aperol_aria" aria-label="Aperol Spritz">
+              <span class="featured-drink__icon featured-drink__icon--cocktail" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 4h12l-5 6v5.5l2.3 2.8H8.7L11 15.5V10L6 4z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                  <path d="M9 4l3 3.8L15 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 12.2v1.8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div class="featured-drink__text">
+                <p class="featured-drink__kicker" data-i18n="menu.featured_kicker">Wyróżnione</p>
+                <h3 class="featured-drink__name" data-i18n="menu.drinks.aperol.name">Aperol Spritz</h3>
+                <p class="featured-drink__desc" data-i18n="menu.featured.aperol.desc">Aperol, Prosecco, woda gazowana</p>
+              </div>
+              <div class="featured-drink__price" aria-hidden="true">36 PLN</div>
+            </article>
+
+            <article class="featured-drink featured-drink--mojito" tabindex="0" data-i18n-aria-label="menu.featured_mojito_aria" aria-label="Mojito">
+              <span class="featured-drink__icon featured-drink__icon--highball" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 4h8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                  <path d="M9 4v3c0 1.2-1 2.2-2.2 2.2H6.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                  <path d="M15 4v3c0 1.2 1 2.2 2.2 2.2h.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                  <path d="M7.3 9.2l1 11.8h7.4l1-11.8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.2 13.2h3.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.8"/>
+                  <path d="M9.9 16.3h4.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
+                </svg>
+              </span>
+              <div class="featured-drink__text">
+                <p class="featured-drink__kicker" data-i18n="menu.featured_kicker">Wyróżnione</p>
+                <h3 class="featured-drink__name" data-i18n="menu.drinks.mojito.name">Mojito</h3>
+                <p class="featured-drink__desc" data-i18n="menu.featured.mojito.desc">Rum, mięta, limonka, cukier trzcinowy</p>
+              </div>
+              <div class="featured-drink__price" aria-hidden="true">35 PLN</div>
+            </article>
+
+            <article class="featured-drink featured-drink--gintonic" tabindex="0" data-i18n-aria-label="menu.featured_gintonic_aria" aria-label="Gin i Tonic">
+              <span class="featured-drink__icon featured-drink__icon--highball" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 4h8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                  <path d="M7.3 7.8l1 13.2h7.4l1-13.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9.4 12.2h5.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                  <path d="M10 15.4h4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.55"/>
+                </svg>
+              </span>
+              <div class="featured-drink__text">
+                <p class="featured-drink__kicker" data-i18n="menu.featured_kicker">Wyróżnione</p>
+                <h3 class="featured-drink__name" data-i18n="menu.drinks.gin.name">Gin &amp; Tonic</h3>
+                <p class="featured-drink__desc" data-i18n="menu.featured.gin.desc">Gin, tonik, cytryna</p>
+              </div>
+              <div class="featured-drink__price" aria-hidden="true">36 PLN</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="signature menu-reveal" data-i18n-aria-label="menu.signature_aria" aria-label="Syrena Signature">
+          <div class="signature__card">
+            <div class="signature__halo" aria-hidden="true"></div>
+            <div class="signature__meta">
+              <p class="signature__eyebrow" data-i18n="menu.signature_eyebrow">SYRENA SIGNATURE</p>
+              <h3 class="signature__name" data-i18n="menu.signature_name">SYRENA SIGNATURE</h3>
+              <p class="signature__blend" data-i18n="menu.signature_blend">Gin • Blue Curaçao • Citrus • Ocean Foam</p>
+              <p class="signature__desc" data-i18n="menu.signature_desc">Autorski koktajl inspirowany głębią oceanu.</p>
+            </div>
+            <div class="signature__price" aria-hidden="true">42 PLN</div>
+          </div>
+        </section>
+
+        <section class="menu-section menu-reveal" aria-labelledby="menu-snacks">
+          <header class="menu-section__header">
+            <div class="menu-section__title-row">
+              <span class="menu-section__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 8h16M6.5 8l1.2 11h8.6l1.2-11" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 8V6.6c0-1.4 1.1-2.6 2.5-2.6S14 5.2 14 6.6V8" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="menu-section__title" id="menu-snacks" data-i18n="menu.snacks.title">PRZEKĄSKI</h3>
+            </div>
+            <p class="menu-section__subtitle" data-i18n="menu.snacks.sub">Idealne do chrupania między piosenkami.</p>
+          </header>
+          <div class="menu-table" role="table" data-i18n-aria-label="menu.snacks.table_aria" aria-label="Przekąski">
+            <div class="menu-table__head" role="row">
+              <span class="menu-table__col menu-table__col--name" role="columnheader" data-i18n="menu.col_item">Pozycja</span>
+              <span class="menu-table__col menu-table__col--price" role="columnheader" data-i18n="menu.col_price">Cena</span>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--chips" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9c0-2 1.6-3.6 3.6-3.6h4.8C16.4 5.4 18 7 18 9v1.2H6V9z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M7 10.2l1.1 9.6h7.8l1.1-9.6" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M9.2 7.3c.7-.8 1.7-1.3 2.8-1.3 1.1 0 2.1.5 2.8 1.3" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M10.2 13.2c.8-.6 1.6-.6 2.4 0 .8.6 1.6.6 2.4 0" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.6"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.snacks.chips.name">Zestaw chipsów i chrupek</p>
+                  <p class="menu-row__desc" data-i18n="menu.snacks.chips.desc">Assortyment chipsów i chrupiących przekąsek</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">22 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--peanut" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4.8c-2.8-2.4-6.6-.3-6.6 3.2 0 1.8.8 2.9 1.7 3.7-.9.8-1.7 1.9-1.7 3.7 0 3.5 3.8 5.6 6.6 3.2 2.8 2.4 6.6.3 6.6-3.2 0-1.8-.8-2.9-1.7-3.7.9-.8 1.7-1.9 1.7-3.7 0-3.5-3.8-5.6-6.6-3.2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M12 7.2v9.6" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.65"/>
+                    <path d="M9.2 10.2h.01M14.8 13.8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.snacks.peanut.name">Orzeszki ziemne</p>
+                  <p class="menu-row__desc" data-i18n="menu.snacks.peanut.desc">Solone / paprykowe</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">12 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--popcorn" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.6 8.8c-.9-.9-.8-2.2.2-3 .9-.7 2.2-.5 2.9.4.6-1.1 2.1-1.5 3.2-.7.9.6 1.2 1.7.8 2.6 1.2-.2 2.4.6 2.6 1.8.2 1.2-.6 2.4-1.8 2.6H6.9c-1.2 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1c.4 0 .8.1 1.1.3z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                    <path d="M7.4 12.8l1.2 7.7h6.8l1.2-7.7" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M9 14.2h6" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.65"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.snacks.popcorn.name">Popcorn</p>
+                  <p class="menu-row__desc" data-i18n="menu.snacks.popcorn.desc">Maślany / solony</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">16 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--nachos" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.2 18.8L12 5.2l5.8 13.6H6.2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M9.2 14.2h.01M12 12.5h.01M14.8 14.2h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+                    <path d="M5.2 18.8h13.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.7"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.snacks.nachos.name">Nachosy z sosem</p>
+                  <p class="menu-row__desc" data-i18n="menu.snacks.nachos.desc">Sos serowy / salsa</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">24 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--sausage" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.6 8.2c.8-2.3 3-3.9 5.4-3.9 2.4 0 4.5 1.6 5.4 3.9.9 2.7-.3 5.8-2.8 7.1l-3.4 1.8c-2.5 1.3-3.7 4.4-2.8 7.1" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M6.2 10.4l1.8-1M16 15.6l1.8-1" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.65"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.snacks.kabanos.name">Kabanosy</p>
+                  <p class="menu-row__desc" data-i18n="menu.snacks.kabanos.desc">Drobiowe / wieprzowe</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">26 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--sticks" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 19L17 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M10 20.2L20.2 10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M3.8 14L14 3.8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.65"/>
+                    <path d="M8.6 13.6h.01M12.2 9.8h.01M15.2 6.8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.snacks.sticks.name">Paluszki słone</p>
+                  <p class="menu-row__desc" data-i18n="menu.snacks.sticks.desc">Klasyczne, delikatnie solone</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">10 PLN</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-section menu-reveal" aria-labelledby="menu-boards">
+          <header class="menu-section__header">
+            <div class="menu-section__title-row">
+              <span class="menu-section__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 10.5h15M7 13.5h10" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                  <path d="M6 18c.6-3.6 3.1-6 6-6s5.4 2.4 6 6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                  <path d="M6.2 18h11.6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="menu-section__title" id="menu-boards" data-i18n="menu.boards.title">TALERZE I BOXY DO PODZIAŁU</h3>
+            </div>
+            <p class="menu-section__subtitle" data-i18n="menu.boards.sub">Wygodne formy finger food na jeden kęs.</p>
+          </header>
+          <div class="menu-table" role="table" data-i18n-aria-label="menu.boards.table_aria" aria-label="Talerze i boxy do podziału">
+            <div class="menu-table__head" role="row">
+              <span class="menu-table__col menu-table__col--name" role="columnheader" data-i18n="menu.col_item">Pozycja</span>
+              <span class="menu-table__col menu-table__col--price" role="columnheader" data-i18n="menu.col_price">Cena</span>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--cheese-board" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 9.2h13v9.2H5.5V9.2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M7.4 9.2c.4-2.3 2.4-4 4.8-4 2.4 0 4.4 1.7 4.8 4" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M8.2 13.2h.01M11 14.6h.01M14 12.6h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+                    <path d="M5.5 18.4h13" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.65"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.boards.cheese.name">Deska serów</p>
+                  <p class="menu-row__desc" data-i18n="menu.boards.cheese.desc">Gouda, Camembert, ser pleśniowy, winogrona, orzechy</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">58 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--charcuterie" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 9.2h13v9.2H5.5V9.2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M8 12.2c1 .6 2 .6 3 0s2-.6 3 0 2 .6 3 0" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.75"/>
+                    <path d="M7.4 15.2h4.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.65"/>
+                    <path d="M13.4 15.2h3.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.65"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.boards.charcuterie.name">Deska wędlin</p>
+                  <p class="menu-row__desc" data-i18n="menu.boards.charcuterie.desc">Szynka, salami, krakowska, pikle</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">62 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--skewer" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 19L18.5 6.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M8.4 16.6l-2-2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                    <path d="M10.8 14.2l-2-2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                    <path d="M13.2 11.8l-2-2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                    <path d="M15.6 9.4l-2-2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.boards.skewer.name">Koreczki imprezowe</p>
+                  <p class="menu-row__desc" data-i18n="menu.boards.skewer.desc">Ser, szynka, oliwki, warzywa</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">36 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--fruit" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.2 13.2c.8 4.2 3.2 6.8 5.8 6.8s5-2.6 5.8-6.8H6.2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M7.2 13.2c1.1-2.6 2.7-4.2 4.8-4.2s3.7 1.6 4.8 4.2" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.75"/>
+                    <path d="M10 9c.2-1.8 1-3.2 2-4.2" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.6"/>
+                    <path d="M12 4.8c.6.2 1.3.3 2.1.2" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.6"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.boards.fruit.name">Talerz owoców</p>
+                  <p class="menu-row__desc" data-i18n="menu.boards.fruit.desc">Sezonowa kompozycja owoców</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">42 PLN</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-section menu-reveal" aria-labelledby="menu-cold">
+          <header class="menu-section__header">
+            <div class="menu-section__title-row">
+              <span class="menu-section__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 3h8" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                  <path d="M9 3v3c0 1.2-1 2.2-2.2 2.2H6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                  <path d="M15 3v3c0 1.2 1 2.2 2.2 2.2H18" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                  <path d="M7.3 8.8l1 12.2h7.4l1-12.2" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <h3 class="menu-section__title" id="menu-cold" data-i18n="menu.cold.title">NAPOJE ZIMNE</h3>
+            </div>
+          </header>
+          <div class="menu-table" role="table" data-i18n-aria-label="menu.cold.table_aria" aria-label="Napoje zimne">
+            <div class="menu-table__head" role="row">
+              <span class="menu-table__col menu-table__col--name" role="columnheader" data-i18n="menu.col_item">Pozycja</span>
+              <span class="menu-table__col menu-table__col--price" role="columnheader" data-i18n="menu.col_price">Cena</span>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--water" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 3h4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M10.6 3v2.2L9.1 7v2.2c0 .6-.2 1.2-.7 1.6-.7.8-1 1.7-1 2.7V21h9V15.5c0-1-.3-1.9-1-2.7-.4-.4-.7-1-.7-1.6V7l-1.4-1.8V3" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M9.2 15.4c.7.9 1.7 1.4 2.8 1.4s2.1-.5 2.8-1.4" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.7"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.cold.water.name">Woda mineralna</p>
+                  <p class="menu-row__desc" data-i18n="menu.cold.water.desc">Niegazowana lub gazowana</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">10 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--juice" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5h8l-1 16H9L8 5z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M7.6 5h8.8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M12 5v4.2" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M9.6 12.8h4.8" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.65"/>
+                    <path d="M16.8 4.5l2.2-1.2" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.6"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.cold.juice.name">Soki owocowe</p>
+                  <p class="menu-row__desc" data-i18n="menu.cold.juice.desc">Pomarańczowy, jabłkowy, multiwitamina</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">12 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--soda" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 7h8l-1 14H9L8 7z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M8 7c0-1.8 1.8-3.5 4-3.5s4 1.7 4 3.5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.75"/>
+                    <path d="M11 7.2l-1.6-2.7" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.6"/>
+                    <path d="M13 7.2l1.6-2.7" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.6"/>
+                    <path d="M9.6 13h4.8" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.65"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.cold.soda.name">Pepsi / Coca-Cola / Sprite / Mirinda</p>
+                  <p class="menu-row__desc" data-i18n="menu.cold.soda.desc">Klasyczne napoje gazowane</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">12 PLN</div>
+            </div>
+            <div class="menu-row" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--energy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 4h6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9.5 4v2.2L8.4 8.1v2.2c0 .6-.2 1.2-.7 1.6-.6.7-.9 1.6-.9 2.5V21h10.4v-6.6c0-.9-.3-1.8-.9-2.5-.5-.4-.7-1-.7-1.6V8.1l-1.1-1.9V4" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M12.8 10.2l-2.1 3.4h2l-1.5 3.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.cold.energy.name">Energy drink</p>
+                  <p class="menu-row__desc" data-i18n="menu.cold.energy.desc">Dla drugiej fali nocy</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">18 PLN</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-section menu-reveal" aria-labelledby="menu-alc">
+          <header class="menu-section__header">
+            <div class="menu-section__title-row">
+              <span class="menu-section__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 3h6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                  <path d="M10 3v5l-3 4v9h10v-9l-3-4V3" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/>
+                  <path d="M9 14h6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="menu-section__title" id="menu-alc" data-i18n="menu.alc.title">ALKOHOLE</h3>
+            </div>
+          </header>
+          <div class="menu-table" role="table" data-i18n-aria-label="menu.alc.table_aria" aria-label="Alkohole">
+            <div class="menu-table__head" role="row">
+              <span class="menu-table__col menu-table__col--name" role="columnheader" data-i18n="menu.col_item">Pozycja</span>
+              <span class="menu-table__col menu-table__col--price" role="columnheader" data-i18n="menu.col_price">Cena</span>
+            </div>
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--beer" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.2 7.5h8.2v12.8H8.3c-.6 0-1-.4-1.1-1L6.6 8.7c-.1-.7.4-1.2 1.1-1.2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M15.4 9.2h2c1.6 0 2.6 1.1 2.6 2.6s-1 2.6-2.6 2.6h-2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M8 6.2c.8-.9 1.7-1.4 2.8-1.4 1 0 1.8.4 2.5 1.2.6-.6 1.4-.9 2.2-.9 1.1 0 2 .5 2.5 1.4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.beer.name">Piwo butelkowe (0.5L)</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.beer.ing">(lager, pszeniczne, IPA)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.beer.flavor">CHRUPKIE, CHMIELOWE, WIECZOROWE</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">18 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--beer-na" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3.5h8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9 3.5v3c0 1.2-1 2.2-2.2 2.2H6.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M15 3.5v3c0 1.2 1 2.2 2.2 2.2h.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M7.4 8.7l1 12.3h7.2l1-12.3" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M9.4 13.2h5.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                    <path d="M10.2 16.2h3.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.55"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.beer_na.name">Piwo bezalkoholowe (0%)</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.beer_na.ing">(lekko chmielowe, schłodzone)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.beer_na.flavor">LEKKIE, ŚWIEŻE, BEZALKOHOLOWE</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">17 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--wine" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 4h10v4.5c0 3-2.2 5.5-5 5.5S7 11.5 7 8.5V4z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M12 14v5.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M8.5 20h7" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M7 7.2h10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.wine_glass.name">Wino (kieliszek)</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.wine_glass.ing">(białe / czerwone / różowe)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.wine_glass.flavor">WYTRAWNE, ELEGANCKIE, KLASYCZNE</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">24 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--bottle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 3h4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M10.5 3v2l-1.7 2v2.2c0 .7-.3 1.3-.8 1.8-.7.7-1 1.7-1 2.7V21h10V15.4c0-1-.4-2-1-2.7-.5-.5-.8-1.1-.8-1.8V7l-1.7-2V3" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M9 14h6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.7"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.wine_bottle.name">Wino (butelka)</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.wine_bottle.ing">(białe / czerwone / różowe)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.wine_bottle.flavor">PEŁNE, DŁUGIE, NA STOLIK</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">110 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--flute" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4h4v6.2c0 2-1.2 3.6-2 3.6s-2-1.6-2-3.6V4z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M12 13.8v5.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9.5 20h5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M10 7.2h4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.75"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.prosecco.name">Prosecco</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.prosecco.ing">(musujące, schłodzone)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.prosecco.flavor">WYTRAWNY, ELEGANCKI, MUSUJĄCY</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">140 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--champagne" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 3h2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M10.6 3v2.2l-1.4 1.7v2c0 .6-.2 1.2-.7 1.6-.7.8-1 1.7-1 2.7V21h9V15.2c0-1-.3-1.9-1-2.7-.4-.4-.7-1-.7-1.6v-2l-1.4-1.7V3" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M8.7 12.6h6.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.65"/>
+                    <path d="M18.4 5.2c.8.4 1.4 1.1 1.4 2.1 0 1.1-.8 2-1.9 2.4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.champagne.name">Szampan</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.champagne.ing">(luksus, bąbelki, celebracja)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.champagne.flavor">PREMIUM, ŚWIĘTUJĄCY, MUSUJĄCY</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">320 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--shot" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 6.5h8l-.8 14H8.8L8 6.5z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M7.6 6.5h8.8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9.6 12.2h4.8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.7"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.vodka_shot.name">Wódka (shot 40ml)</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.vodka_shot.ing">(klasyczna, schłodzona)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.vodka_shot.flavor">CZYSTA, SZYBKA, NOCNA</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">16 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--vodka" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 3h4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M10.5 3v2.2L9.1 7v2.2c0 .6-.2 1.2-.7 1.6-.7.8-1 1.7-1 2.7V21h9V15.5c0-1-.3-1.9-1-2.7-.4-.4-.7-1-.7-1.6V7l-1.4-1.8V3" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M9.2 14h5.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.65"/>
+                    <path d="M9.2 16.4h5.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.45"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.vodka_bottle.name">Wódka (0.5L)</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.vodka_bottle.ing">(butelka na stolik)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.vodka_bottle.flavor">KLASYCZNA, MOCNA, WIECZOROWA</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">180 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--whisky" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 6.8h9l-1 14.2H8.5L7.5 6.8z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M7 6.8h10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9.4 12.4h5.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M10 15.4h4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.55"/>
+                    <path d="M10.2 10.1l1.2-1.2 1.2 1.2-1.2 1.2-1.2-1.2z" stroke="currentColor" stroke-width="1.05" stroke-linejoin="round" opacity="0.6"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.alc.whisky.name">Whisky z lodem / colą</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.alc.whisky.ing">(whisky, lód / cola)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.alc.whisky.flavor">GŁĘBOKA, DĘBOWA, WIECZORNA</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">28 PLN</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-section menu-reveal" aria-labelledby="menu-drinks">
+          <header class="menu-section__header">
+            <div class="menu-section__title-row">
+              <span class="menu-section__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 4h12l-4.5 6v6.2l2.2 2.8H8.3l2.2-2.8V10L6 4z" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/>
+                  <path d="M9 4l3 4 3-4" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 12v2.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="menu-section__title" id="menu-drinks" data-i18n="menu.drinks.title">DRINKI</h3>
+            </div>
+          </header>
+          <div class="menu-table" role="table" data-i18n-aria-label="menu.drinks.table_aria" aria-label="Drinki">
+            <div class="menu-table__head" role="row">
+              <span class="menu-table__col menu-table__col--name" role="columnheader" data-i18n="menu.col_item">Pozycja</span>
+              <span class="menu-table__col menu-table__col--price" role="columnheader" data-i18n="menu.col_price">Cena</span>
+            </div>
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--cocktail" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 4h12l-5 6v5.5l2.3 2.8H8.7L11 15.5V10L6 4z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M9 4l3 3.8L15 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 12.2v1.8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.drinks.aperol.name">Aperol Spritz</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.drinks.aperol.ing">(Aperol, Prosecco, woda gazowana)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.drinks.aperol.flavor">SŁODKO-GORZKI, ELEGANCKI</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">36 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--highball" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4h8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9 4v3c0 1.2-1 2.2-2.2 2.2H6.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M15 4v3c0 1.2 1 2.2 2.2 2.2h.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M7.3 9.2l1 11.8h7.4l1-11.8" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.2 13.2h3.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M9.9 16.3h4.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.6"/>
+                    <path d="M15.8 6.6l2.1-2.1" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.65"/>
+                    <path d="M15.7 5.4c.5-.7 1.2-1 2-1" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" opacity="0.55"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.drinks.mojito.name">Mojito</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.drinks.mojito.ing">(rum, mięta, limonka, cukier trzcinowy)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.drinks.mojito.flavor">ŚWIEŻY, CYTRUSOWY, LEKKI</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">35 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--rum" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 6.8h9l-1 14.2H8.5L7.5 6.8z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M7 6.8h10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9.4 12.4h5.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M10 15.4h4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.55"/>
+                    <path d="M15.6 10.6c.7-.1 1.3-.5 1.6-1.1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.55"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.drinks.cuba.name">Cuba Libre</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.drinks.cuba.ing">(rum, Pepsi, limonka)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.drinks.cuba.flavor">KLASYCZNY, KARMEL, LIMONKA</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">34 PLN</div>
+            </div>
+
+            <div class="menu-row menu-row--cocktail" role="row">
+              <div class="menu-row__main" role="cell">
+                <span class="menu-row__icon menu-row__icon--gintonic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 5h11l-4 4.6V14l1.8 2.3H8.7l1.8-2.3V9.6L6.5 5z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M12 14v5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9.5 20h5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                    <path d="M9.3 7.2h5.4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.65"/>
+                  </svg>
+                </span>
+                <div class="menu-row__stack">
+                  <p class="menu-row__name" data-i18n="menu.drinks.gin.name">Gin &amp; Tonic</p>
+                  <p class="menu-row__ingredients" data-i18n="menu.drinks.gin.ing">(gin, tonik, cytryna)</p>
+                  <p class="menu-row__flavor" data-i18n="menu.drinks.gin.flavor">WYTRAWNY, ORZEŹWIAJĄCY</p>
+                </div>
+              </div>
+              <div class="menu-row__price" role="cell">36 PLN</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="menu-note menu-reveal" role="note">
+          <p class="menu-note__line" data-i18n-html="menu.note_html"><strong>Opłata serwisowa za własne jedzenie</strong> — 25 PLN</p>
+          <p class="menu-note__sub" data-i18n="menu.note_sub">Ceny pozycji menu mogą się różnić — zapytaj obsługę przy zamówieniu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="i18n/translations.js"></script>
+  <script src="i18n/i18n.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
